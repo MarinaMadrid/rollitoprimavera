@@ -1,0 +1,183 @@
+
+
+/* Nota: para poder utilizar la fuente debéis importarla en LA cabecera del HTML:
+<link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Roboto" rel="stylesheet">
+*/
+
+
+html {
+  /* COLORS */
+  --header_background_color: #484432;
+  --text_light_color: #FFFFFF;
+  --body_background_color: #FAFAF5;
+  --main_background_color: #FFFFFF;
+  --section_header_color: #8BAD00;
+  --nav_item_background: #FF7F00;
+  --nav_item_border: #A95400;
+  --nav_item_background_hover: #D16800;
+  --footer_link: #FFB266;
+  --footer_link_hover: #FF860F;
+  /* DIMENS */
+  --horizontal_margin: 2rem;
+  --vertical_margin: 1rem;
+  --foto_min_width: 18rem;
+  --up_icon_width: 3.2rem;
+  --body_font_size: 2rem;
+  /* FONTS */
+  --header_font: 'Merriweather', serif;
+  --main_font: 'Roboto', sans-serif;
+  --title_font: 'Open Sans', sans-serif;
+
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: var(--main_font);
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+
+/*Comunes*/
+header, #fotos figcaption, footer{
+  background-color: var(--header_background_color);
+}
+
+header, footer, figcaption{
+  text-align: center;
+}
+
+header, nav li, #fotos figcaption, footer {
+  color: var(--text_light_color);
+}
+
+/*Body*/
+body{
+  border: 50px solid var(--body_background_color);
+  font-size: var(--body_font_size);
+}
+
+/*Header y menú*/
+header {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  font-family: var(--header_font);
+  padding: 5px;
+  word-spacing: 10px;
+  width: 100%;
+}
+
+.nav__item {
+  display: inline-block;
+  margin-top: 1%;
+}
+
+.nav__item__link {
+  list-style: none;
+  background-color: var(--nav_item_background);
+  border: 1px solid var(--nav_item_border);
+  display: inline-block;
+  padding: 0.7rem;
+}
+
+.nav__item__link:hover{
+  background-color: var(--nav_item_background_hover);
+}
+
+.nav__item a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/*Main*/
+main{
+  background-color: var(--main_background_color);
+  border: 1px solid var(--header_background_color);
+  border-radius: 5px;
+  border-top: 0;
+}
+
+/*Secciones*/
+section{
+  margin-left: var(--horizontal_margin);
+  margin-top: var(--vertical_margin);
+  font-family: var(--main_font);
+  padding: 0.5em;
+}
+
+.section__title{
+  color: var(--section_header_color);
+  font-family: var(--title_font);
+}
+
+.section hr{
+  background-color: var(--section_header_color);
+  height: 3px;
+}
+
+ul, ol {
+  margin-left: var(--horizontal_margin);
+}
+
+section p, ul li:first-child, ol li:first-child, #fotos img:first-child{
+  margin-top: var(--vertical_margin);
+}
+
+#descripcion p::first-letter{
+  margin-left: 20px;
+  text-indent: 20px;
+}
+
+#ingredientes ul li {
+  list-style: none;
+  list-style-image: url("img/tenedor.png");
+}
+
+/*Fotos*/
+#fotos figure{
+  display: inline-block;
+  margin-left: var(--horizontal_margin);
+}
+
+#fotos figure img{
+  min-width: var(--foto_min_width);
+  height: 40vh;
+  justify-content: space-between;
+  display: block;
+}
+
+#fotos figcaption{
+  padding: 10px;
+}
+
+.section__up__icon {
+  width: var(--up_icon_width);
+  float: right;
+}
+
+#fotos .section__up__icon:last-child{
+  width: var(--up_icon_width);
+  margin-bottom: 0.5%;
+  margin-left: 98%;
+}
+
+/*Footer*/
+footer, figcaption{
+  font-size: small;
+}
+
+.footer{
+  padding: 20px;
+  font-weight: bolder;
+}
+
+.footer__link{
+  color: var(--footer_link);
+  text-decoration: none;
+}
+
+.footer__link:hover{
+  color: var(--footer_link_hover);
+}
